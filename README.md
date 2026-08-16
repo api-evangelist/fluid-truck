@@ -42,5 +42,13 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Fluid Truck is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/fluid-truck_stock/
+Fluid Truck was a Denver, Colorado peer-to-peer commercial vehicle sharing platform founded in 2016, often described as "the Zipcar of commercial vehicles." It rented cargo vans, box trucks and flatbeds through a self-service mobile app across roughly 400 cities in 32 US states, and ran the Fluid Vehicle Investor Program (FVIP).
+
+**The company is wound down.** It filed for Chapter 11 bankruptcy in Delaware in October 2024, sold substantially all assets to Kingbee Rentals in December 2024, and the case converted to Chapter 7 liquidation in September 2025.
+
+Fluid Truck never published a developer program, API reference, or machine-readable contract, and its web properties no longer serve a valid TLS certificate. The only Fluid Truck property still serving content is its GitHub organization, which carries internal platform infrastructure released as open source (Helm charts and a Go utility module) — not client SDKs.
+
+- https://fluidtruck.com/ — apex, TLS handshake fails
+- https://github.com/fluidtruck — GitHub organization
+- https://fluidtruck.github.io/helm-charts — first-party Helm chart repository
+- https://forgeglobal.com/fluid-truck_stock/ — secondary-market listing this profile was harvested from

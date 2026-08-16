@@ -1,0 +1,28 @@
+# Fluid Truck
+
+> Fluid Truck was a Denver, Colorado peer-to-peer commercial vehicle sharing platform, founded in 2016 by James Eberhard and Jenifer Snyder and often described as "the Zipcar of commercial vehicles." It rented cargo vans, box trucks and flatbeds through a self-service mobile app across roughly 400 cities in 32 US states, and ran the Fluid Vehicle Investor Program (FVIP) through which individuals and small businesses purchased fleets that Fluid managed. The company is wound down. It filed Chapter 11 in Delaware in October 2024, sold substantially all assets to Kingbee Rentals in December 2024, and the case converted to Chapter 7 liquidation in September 2025.
+
+## Status
+
+- **Operating status:** defunct (Chapter 7 liquidation, September 2025)
+- **API surface:** none. Fluid Truck never published a developer program, API reference, or machine-readable contract. A Wayback CDX sweep of fluidtruck.com found no archived `/api`, `/developer`, `/docs`, `/swagger` or `/graphql` path.
+- **Web properties:** unreachable. `fluidtruck.com` and `www.fluidtruck.com` fail the TLS handshake; `app.fluidtruck.com` returns Vercel `DEPLOYMENT_NOT_FOUND`; `status.fluidtruck.com` is a deactivated Atlassian Statuspage; `help.fluidtruck.com` is a dangling CNAME.
+
+## What still exists
+
+- [GitHub organization](https://github.com/fluidtruck): the only Fluid Truck property still serving content.
+- [Helm chart repository](https://fluidtruck.github.io/helm-charts): seven first-party charts (`golang`, `cronjob`, `dotnet`, `common`, `api-gateway`, `python`, `locust`) used to deploy the company's own Kubernetes services. Index last regenerated 2025-08-30.
+- [fluidtruck/deepcopy](https://github.com/fluidtruck/deepcopy): a Go deep-copy utility module, `v1.0.0`, published 2022-08-17.
+
+None of the above is a client SDK or an API contract — they are internal platform infrastructure released as open source.
+
+## API Evangelist profile
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/fluid-truck/refs/heads/main/apis.yml)
+- [Packages inventory](https://raw.githubusercontent.com/api-evangelist/fluid-truck/refs/heads/main/packages/fluid-truck-packages.yml)
+- [Well-known probe record](https://raw.githubusercontent.com/api-evangelist/fluid-truck/refs/heads/main/well-known/fluid-truck-well-known.yml)
+- [Domain security probe](https://raw.githubusercontent.com/api-evangelist/fluid-truck/refs/heads/main/security/fluid-truck-domain-security.yml)
+
+## Notes for agents
+
+There is no Fluid Truck API to call. Do not attempt to construct a base URL, authenticate, or infer endpoints for this company — no such surface was ever published, and the hosts that once served the product no longer complete a TLS handshake.

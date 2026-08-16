@@ -1,0 +1,107 @@
+generated: '2026-08-16'
+method: searched
+source: https://github.com/fluidtruck + https://fluidtruck.github.io/helm-charts/index.yaml + https://proxy.golang.org
+note: >-
+  Fluid Truck published no API client libraries. Searched npm, PyPI, RubyGems,
+  crates.io, NuGet, Maven Central, Packagist and pkg.go.dev for a Fluid Truck SDK —
+  all miss (npm/fluidtruck 404, pypi/fluidtruck 404). What the company DID publish is
+  internal platform infrastructure released as open source from its own GitHub
+  organization: a Helm chart repository and one Go utility module. These are
+  deployment/utility packages, not client SDKs, so no `SDKs` pointer is emitted in
+  apis.yml — only `Packages`.
+registries_searched:
+- {registry: npm, query: fluidtruck, result: 404}
+- {registry: npm, query: fluid-truck, result: 404}
+- {registry: pypi, query: fluidtruck, result: 404}
+- {registry: pypi, query: fluid-truck, result: 404}
+- {registry: helm, query: 'https://fluidtruck.github.io/helm-charts', result: 200}
+- {registry: go-proxy, query: github.com/fluidtruck/deepcopy, result: 200}
+sdk_count: 0
+packages:
+- language: go
+  registry: go
+  name: github.com/fluidtruck/deepcopy
+  url: https://pkg.go.dev/github.com/fluidtruck/deepcopy
+  install: go get github.com/fluidtruck/deepcopy
+  official: true
+  kind: utility-library
+  version: v1.0.0
+  published: '2022-08-17'
+  note: >-
+    First-party Go deep-copy utility, published from the fluidtruck GitHub org and
+    resolvable on proxy.golang.org. Not an API client. Last tagged release 2022-08-17;
+    last repository push 2024-06-11.
+- language: yaml
+  registry: helm
+  name: golang
+  url: https://fluidtruck.github.io/helm-charts
+  install: helm repo add fluidtruck https://fluidtruck.github.io/helm-charts && helm install golang fluidtruck/golang
+  official: true
+  kind: deployment-chart
+  version: 10.1.0
+  published: '2025-08-30'
+  note: Helm chart for deploying Fluid Truck's Go services. 61 published versions.
+- language: yaml
+  registry: helm
+  name: cronjob
+  url: https://fluidtruck.github.io/helm-charts
+  install: helm install cronjob fluidtruck/cronjob
+  official: true
+  kind: deployment-chart
+  version: 2.1.1
+  published: '2024-01-12'
+- language: yaml
+  registry: helm
+  name: dotnet
+  url: https://fluidtruck.github.io/helm-charts
+  install: helm install dotnet fluidtruck/dotnet
+  official: true
+  kind: deployment-chart
+  version: 1.0.5
+  published: '2023-05-25'
+- language: yaml
+  registry: helm
+  name: common
+  url: https://fluidtruck.github.io/helm-charts
+  install: n/a — library chart, consumed as a dependency
+  official: true
+  kind: library-chart
+  version: 1.3.0
+  published: '2023-04-04'
+- language: yaml
+  registry: helm
+  name: api-gateway
+  url: https://fluidtruck.github.io/helm-charts
+  install: helm install api-gateway fluidtruck/api-gateway
+  official: true
+  kind: deployment-chart
+  version: 1.0.2
+  published: '2022-10-19'
+  note: >-
+    Chart for the company's internal API gateway service. Names an API gateway but
+    carries no API contract — it is a Kubernetes deployment template only.
+- language: yaml
+  registry: helm
+  name: python
+  url: https://fluidtruck.github.io/helm-charts
+  install: helm install python fluidtruck/python
+  official: true
+  kind: deployment-chart
+  version: 1.0.0
+  published: '2022-09-30'
+- language: yaml
+  registry: helm
+  name: locust
+  url: https://fluidtruck.github.io/helm-charts
+  install: helm install locust fluidtruck/locust
+  official: true
+  kind: deployment-chart
+  version: 1.0.0
+  published: '2021-07-20'
+  note: Chart for launching Locust load tests.
+decay:
+  chart_index_generated: '2025-08-30'
+  note: >-
+    The Helm index was last regenerated 2025-08-30, the same month the Chapter 11 case
+    converted to Chapter 7 liquidation. Every other package predates the October 2024
+    bankruptcy filing.

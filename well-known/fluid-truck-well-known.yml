@@ -1,0 +1,75 @@
+generated: '2026-08-16'
+method: probed
+source: live HTTPS probes of every Fluid Truck host resolvable in DNS
+note: >-
+  No /.well-known/ document was retrieved from any Fluid Truck host. Every host either
+  fails the TLS handshake outright or serves a certificate that does not validate, so
+  no path could be read. This file records the ABSENCE of a discovery surface — no
+  WellKnown or SecurityTxt pointer is emitted in apis.yml, because nothing was served.
+hosts:
+- host: fluidtruck.com
+  reachable: false
+  failure: tls-handshake-failed
+  detail: >-
+    TLS alert "internal error" on every connection to port 443 (Cloudflare NS,
+    Webflow proxy A records). Port 80 answers and 301-redirects to https://, which
+    then cannot complete a handshake, so the apex is effectively unreachable.
+- host: www.fluidtruck.com
+  reachable: false
+  failure: tls-handshake-failed
+  detail: CNAME to proxy-ssl.webflow.com; identical TLS internal-error alert.
+- host: app.fluidtruck.com
+  reachable: false
+  failure: tls-cert-invalid
+  detail: >-
+    CNAME to cname.vercel-dns.com. With verification disabled the origin returns
+    HTTP 404 "DEPLOYMENT_NOT_FOUND" — the Vercel deployment behind the customer
+    application host has been removed.
+- host: status.fluidtruck.com
+  reachable: false
+  failure: tls-cert-invalid
+  detail: >-
+    CNAME to j8whvyqd2016.stspg-customer.com (Atlassian Statuspage); certificate
+    hostname mismatch. With verification disabled the page returns HTTP 200 titled
+    "FluidTruck Status - Page Inactive" — the status page has been deactivated, so no
+    StatusPage pointer is emitted.
+- host: help.fluidtruck.com
+  reachable: false
+  failure: dns-nxdomain
+  detail: Dangling CNAME to fluidmarket.desk.com, which no longer resolves.
+documents:
+- path: /.well-known/security.txt
+  status: tls-handshake-failed
+- path: /.well-known/openid-configuration
+  status: tls-handshake-failed
+- path: /.well-known/oauth-authorization-server
+  status: tls-handshake-failed
+- path: /.well-known/oauth-protected-resource
+  status: tls-handshake-failed
+- path: /.well-known/api-catalog
+  status: tls-handshake-failed
+- path: /.well-known/ai-plugin.json
+  status: tls-handshake-failed
+- path: /.well-known/agent-card.json
+  status: tls-handshake-failed
+- path: /.well-known/agent.json
+  status: tls-handshake-failed
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery was run against every resolvable host. Nothing could be
+    read because no host completes TLS. A Wayback CDX sweep of fluidtruck.com (20,000
+    captured URLs) returned no /api, /developer, /docs, /swagger, /openapi or /graphql
+    path in the archive either, so there is no evidence Fluid Truck ever published a
+    developer program.
+  probed_paths:
+  - /openapi.json
+  - /openapi.yaml
+  - /swagger.json
+  - /v1/openapi.json
+  - /api-docs
+  - /docs
+  - /redoc
+  - /graphql
+  - /mcp
+  - /llms.txt
+  result: none
