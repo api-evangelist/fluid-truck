@@ -64,13 +64,45 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Fluid Truck was a Denver, Colorado peer-to-peer commercial vehicle sharing platform founded in 2016, often described as "the Zipcar of commercial vehicles." It rented cargo vans, box trucks and flatbeds through a self-service mobile app across roughly 400 cities in 32 US states, and ran the Fluid Vehicle Investor Program (FVIP).
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-**The company is wound down.** It filed for Chapter 11 bankruptcy in Delaware in October 2024, sold substantially all assets to Kingbee Rentals in December 2024, and the case converted to Chapter 7 liquidation in September 2025.
+Fluid Truck was a Denver, Colorado peer-to-peer commercial vehicle sharing platform founded in 2016 by James Eberhard and Jenifer Snyder, often described as "the Zipcar of commercial vehicles". It operated an app-based, self-service rental marketplace for cargo vans, box trucks and flatbeds across roughly 400 cities in 32 US states, and ran the Fluid Vehicle Investor Program (FVIP) through which individuals and small businesses bought fleets that Fluid managed and rented out. The company raised over $80 million in venture funding, filed for Chapter 11 bankruptcy in Delaware in October 2024 after an $20.6 million cash loss in 2023, sold substantially all assets to Kingbee Rentals in December 2024, and the case converted to Chapter 7 liquidation in September 2025. The company is wound down: no developer program, API documentation, or machine-readable contract was ever published, and its own web properties no longer serve a valid TLS certificate.
 
-Fluid Truck never published a developer program, API reference, or machine-readable contract, and its web properties no longer serve a valid TLS certificate. The only Fluid Truck property still serving content is its GitHub organization, which carries internal platform infrastructure released as open source (Helm charts and a Go utility module) — not client SDKs.
+**Areas:** Company · Transportation · Logistics · Vehicle Rental · Fleet Management · Mobility · Marketplace · Defunct
 
-- https://fluidtruck.com/ — apex, TLS handshake fails
-- https://github.com/fluidtruck — GitHub organization
-- https://fluidtruck.github.io/helm-charts — first-party Helm chart repository
-- https://forgeglobal.com/fluid-truck_stock/ — secondary-market listing this profile was harvested from
+## Fluid Truck on APIs.io (historical record)
+
+Everything profiled for Fluid Truck is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/fluid-truck/](https://apis.io/providers/fluid-truck/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Fluid Truck Domain Security](https://apis.io/security/fluid-truck/fluid-truck-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://fluidtruck.com/)
+- [GitHub](https://github.com/fluidtruck)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Fluid Truck: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/fluid-truck/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
